@@ -1,0 +1,32 @@
+#include "CLASS_NAME.h"
+
+// Qt 
+#include <QWidget>
+
+// DataBase2
+#include <DataBase2/UserDb.h>
+
+// Self
+#include "CLASS_NAMEPrivate.h"
+
+NAMESPACE::CLASS_NAME::CLASS_NAME(QWidget* parent, nsDataBase2::UserDb* db)
+    : QWidget(parent)
+    , d_ptr(new CLASS_NAMEPrivate(this, db))
+{
+}
+
+QAbstractItemModel* NAMESPACE::CLASS_NAME::getModel()
+{
+    return d_func()->model_;
+}
+
+QAbstractItemView* NAMESPACE::CLASS_NAME::getView()
+{
+    return d_func()->view_;
+}
+
+QMenu* NAMESPACE::CLASS_NAME::getMenu()
+{
+    return d_func()->contextMenu_;
+}
+

@@ -1,0 +1,7 @@
+#!/bin/sh
+[Desktop Entry]
+Name=class_generator
+Exec=class_generator
+Icon=class_generator
+Type=Application
+Categories=Utility;

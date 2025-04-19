@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Получение пути до директории пакета 
+HERE="$(dirname "$(readlink -f "${0}")")"
+
+# Добавление директории с зависимостями в переменную PATH
+export LD_LIBRARY_PATH="${HERE}/usr/lib:${LD_LIBRARY_PATH}"
+
+# Запуск исполняемого файла
+exec "${HERE}/usr/bin/Example" "$@"
